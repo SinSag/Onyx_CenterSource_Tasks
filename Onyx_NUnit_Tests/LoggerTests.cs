@@ -7,11 +7,12 @@ namespace Onyx_Tests
         [Test]
         public void Log_Test_Correct_DateTime_Prefix()
         {
-            Logger logger = new Logger(@"C:\Users\Sindr\Skrivebord\test.txt");
+            //enter your desired filepath
+            Logger logger = new Logger(@"enter your desired filepath here");
 
             logger.CloseWriter();
-
-            string lastLine = File.ReadLines(@"C:\Users\Sindr\Skrivebord\test.txt").Last();
+            //enter your desired filepath
+            string lastLine = File.ReadLines(@"enter your desired filepath here").Last();
 
             string dateTimeNow = string.Format("[{0:dd.MM.yy HH:mm:ss}]", DateTime.Now);
 
