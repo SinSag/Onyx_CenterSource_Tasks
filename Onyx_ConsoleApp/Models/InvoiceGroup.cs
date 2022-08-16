@@ -1,6 +1,4 @@
-//imports necessary libraries
-using System;
-using System.Collections.Generic;
+//invoicegroup class, inherits from invoice
 
 class InvoiceGroup : Invoice
 {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using WASM_VatService;
 
-namespace VATWebApp.Models
+namespace Onyx_VATWebApp.Models
 {
     public class VAT_Form_Verifier
     {

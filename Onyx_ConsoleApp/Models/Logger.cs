@@ -1,6 +1,4 @@
-//imports necessary libraries
-using System;
-using System.IO;
+//logger class
 
 namespace Onyx_ConsoleApp.Models
 {
@@ -8,22 +6,40 @@ namespace Onyx_ConsoleApp.Models
     {
         private readonly StreamWriter _writer;
 
+        //constructor
         public Logger(string path)
         {
-            _writer = new StreamWriter(File.Open(path, FileMode.Append))
-            {
-                AutoFlush = true
-            };
+            _writer = StartWriter(path);
 
             Log("Logger initialized");
         }
 
-        public void Log(string str)
+        //creates an instance of StreamWriter
+        public StreamWriter StartWriter(string path)
         {
-            _writer.WriteLine(string.Format("[{0:dd.MM.yy HH:mm:ss}] {1}", DateTime.Now, str));
+            var writer = new StreamWriter(File.Open(path, FileMode.Append))
+            {
+                AutoFlush = true
+            };
+
+            return writer;
         }
 
-        public void Close_Writer()
+        //logs the string parameter
+        public void Log(string str)
+        {
+            var date = GetDateTime();
+            _writer.WriteLine(date + " " + str);
+        }
+
+        //gets the current date and time
+        public string GetDateTime()
+        {
+            return string.Format("[{0:dd.MM.yy HH:mm:ss}]", DateTime.Now);
+        }
+
+        //closes the instance of StreamWriter
+        public void CloseWriter()
         {
             _writer.Close();
         }
