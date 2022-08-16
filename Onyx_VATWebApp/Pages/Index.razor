@@ -1,0 +1,31 @@
+﻿@using VATWebApp.Models;
+@using WASM_VatService;
+
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<EditForm Model="newForm" OnValidSubmit="CheckVat">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="d-grid gap-1 col- justify-content-center "> 
+        <h3 class="me-8">Verfiy VAT-number:</h3>
+        <label class="me-6" for="countryCode">  Country code </label> 
+        <InputText id="countryCode" @bind-Value="newForm.countryCode" class="oi-resize-width mb-2 mt-2" type="string"></InputText>
+        <ValidationMessage For="(()=> newForm.countryCode)" />
+        <label class="me-6" for="vatNumber"> VAT-number </label> 
+        <InputText id="vatNumber" @bind-Value="newForm.vatNumber" class="oi-resize-width" type="string"></InputText>
+        <ValidationMessage For="(()=> newForm.vatNumber)" />
+        <button type="submit" class="btn btn-primary me-8 m-1">Verify</button>
+    </div>
+</EditForm>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code{
+    VAT_Form_Verifier newForm = new VAT_Form_Verifier();
+
+    public async Task CheckVat()
+    { 
+        await newForm.VerifyVAT(newForm.countryCode, newForm.vatNumber);
+    }
+}
