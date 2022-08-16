@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Onyx_ConsoleApp", "Onyx_ConsoleApp\Onyx_ConsoleApp.csproj", "{5C854E9F-D0F7-452E-951A-A845F95026BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Onyx_Tests", "Onyx_NUnit_Tests\Onyx_Tests.csproj", "{071D527B-B339-4AFE-82A7-DF3B54F60DD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VATWebApp", "Onyx_VATWebApp\VATWebApp.csproj", "{9CA8F69E-9560-408C-88C3-5EE4D34E74ED}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C854E9F-D0F7-452E-951A-A845F95026BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C854E9F-D0F7-452E-951A-A845F95026BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C854E9F-D0F7-452E-951A-A845F95026BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C854E9F-D0F7-452E-951A-A845F95026BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071D527B-B339-4AFE-82A7-DF3B54F60DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071D527B-B339-4AFE-82A7-DF3B54F60DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071D527B-B339-4AFE-82A7-DF3B54F60DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071D527B-B339-4AFE-82A7-DF3B54F60DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA8F69E-9560-408C-88C3-5EE4D34E74ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA8F69E-9560-408C-88C3-5EE4D34E74ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA8F69E-9560-408C-88C3-5EE4D34E74ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA8F69E-9560-408C-88C3-5EE4D34E74ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
